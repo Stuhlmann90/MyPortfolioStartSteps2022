@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: transparent;
+    color: #fff;
+}
+
+.body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows:repeat(12, 1fr);
+}
+
+.NavBar {
+    background-color: #533483;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.Footer {
+    background-color: #533483;
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+}
+
+.LeftSideMenu {
+    background-color: #533483;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.RightSideMenu {
+    background-color: #533483;
+    grid-column: 11 / span 2;
+    grid-row: 2 / span 10;
+}
+
+/* Main Page body style */
+.PageContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.Pagetitle {
+    text-align: center;
+}
+
+.PageContent {
+    background-color: ghostwhite;
+    grid-column: 3 / span 8;
+    grid-row: 2 / span 10;
+}
+
+.NavBar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagesList ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-right: 10px;
+}
+
+.Brand{
+    padding-left: 10px;
+}
+
+.PageContent{
+    background: radial-gradient(circle at top, #DEBACE,#FEBE8C,#E94560, transparent),
+    radial-gradient(circle at left, #6C4AB6,#8D9EFF,#B9E0FF, transparent);
+
+    background-size: 400% 400%;
+    animation: AnimatedBG 12s ease-in-out infinite;
+}
+
+@-webkit-keyframes AnimatedBG {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+         background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
